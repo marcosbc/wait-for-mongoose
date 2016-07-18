@@ -1,5 +1,5 @@
 {
-  "name": "mongoose-connection",
+  "name": "wait-for-mongoose",
   "version": "0.1.0",
   "description": "Wait for Mongoose connection to succeed.",
   "main": "lib/wait-for-mongoose.js",
