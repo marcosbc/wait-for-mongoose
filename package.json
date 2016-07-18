@@ -1,0 +1,26 @@
+{
+  "name": "mongoose-connection",
+  "version": "0.1.0",
+  "description": "Wait for Mongoose connection to succeed.",
+  "main": "lib/wait-for-mongoose.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcosbc/wait-for-mongoose.git"
+  },
+  "keywords": [
+    "wait",
+    "mongoose",
+    "mongodb"
+  ],
+  "author": "Marcos Bjørkelund",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/marcosbc/wait-for-mongoose/issues"
+  },
+  "homepage": "https://github.com/marcosbc/wait-for-mongoose#readme",
+  "dependencies": {
+    "mongoose": "^4.5.4"
+  }
+}
