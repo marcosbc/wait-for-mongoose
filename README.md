@@ -1,8 +1,43 @@
 # wait-for-mongoose
 
+## Introduction
+
 This module waits for a Mongoose connection to MongoDB to succeed.
 The idea is the same as [wait-for-mongo](https://github.com/arunoda/wait-for-mongo)
-but with the difference that it's based on the Mongoose module.
+but with the difference that it's based on the Mongoose driver.
+
+### Example
+
+If you are looking for a simple way to wait until MongoDB is ready to
+connect, you can try:
+
+```
+var waitForMongoose = require('wait-for-mongoose');
+waitForMongoose('mongodb://myuser:mypass@myhost/mydb', function (err) {
+  if (err) {
+    console.error('Timeout connecting to MongoDB server!');
+    process.exit(1);
+  }
+  // Here you would create your connection
+});
+```
+
+If you want to customize the timeout value and the time between each
+connect requests, you can make use of the `options` parameter:
+
+```
+var waitForMongoose = require('wait-for-mongoose');
+waitForMongoose('mongodb://myuser:mypass@myhost/mydb', {
+  timeout: 1000 * 60 * 5, // 5 minutes until timeout happens
+  interval: 1000 * 1 // 1 second between each request
+}, function (err) {
+  if (err) {
+    console.error('Timeout connecting to MongoDB server!');
+    process.exit(1);
+  }
+  // Here you would create your connection
+});
+```
 
 ## License
 
